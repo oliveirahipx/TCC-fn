@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Escolar</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/images/logo.webp" alt="Logo da Escola CEM 09" style="height: 50px;">
+            </div>
+            <div class="menu">
+                <ul>
+                    <!-- Verifica se o usuário está logado -->
+                    <% if (!session.user) { %> <!-- Se o usuário não estiver logado -->
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/Cadastro">Cadastro</a></li>
+                    <% } else { %> <!-- Se o usuário estiver logado -->
+                        <li><a href="/perfil">Perfil</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bem-vindo ao Portal Escolar</h1>
+        <p>Seja bem-vindo ao portal escolar. Faça login ou cadastre-se para acessar as funcionalidades.</p>
+    </main>
+
+</body>
+</html>
